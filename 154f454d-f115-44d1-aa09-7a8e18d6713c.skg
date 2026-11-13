@@ -2,8 +2,11 @@ title: What a row was for is in its transcript only if the first request says it
 pid: 154f454d-f115-44d1-aa09-7a8e18d6713c
 body: |2-
   A mind lent with the prompt 'tools/team/specialist.sh prompt' prints
-  names its specialist and mission ID, and the account reads both, and
-  gives them to the subagents that mind starts. Missions Top wrote in its
+  names its specialist, its mission's ID and, since 2026-11-13, the
+  mission's kind (plan, reading, build or tending), and the account
+  reads all three, and gives them to the subagents that mind starts.
+  The kind is in no transcript older than that, so 'mission_kind' is
+  empty there, and a kind must still be guessed for those rows. Missions Top wrote in its
   own words, like "Mario: move configs into owners' folders", name
   neither, though the subagent's description often names the specialist.
   So sums by specialist are whole only if every mission is lent through

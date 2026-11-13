@@ -3,5 +3,6 @@ pid: d70a02ef-828b-4a0d-92cf-e83ceaf284ab
 body: |2-
   The fraction of the subscription's five-hour and weekly windows used
   is only in 'bash/claude-usage.sh' and the pacer's log, sampled before
-  each pacer session. Busy time, as against wall time, is not recorded
+  each pacer session; the requests file's times are what to set those
+  samples against. Busy time, as against wall time, is not recorded
   per request; 'cost-state' has a run's total time in API calls.

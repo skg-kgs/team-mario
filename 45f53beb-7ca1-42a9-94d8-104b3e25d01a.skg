@@ -4,5 +4,9 @@ body: |2-
   Claude Code removes transcripts older than its 'cleanupPeriodDays'
   setting, 30 by default, which 'my-dot-claude/settings.json' does not
   change. Rebuilding the account from nothing would lose them; running
-  the script again replaces only rows whose transcripts still exist.
-  I have not yet seen a deletion happen here.
+  the script again replaces only rows whose transcripts still exist,
+  and keeps those rows' requests the same way. Since the pacer runs it
+  after each session, a row is lost only if neither the pacer nor anyone
+  runs it for a month. The weighted price is recomputed from the
+  requests on every run, so a changed weight reaches the rows of
+  deleted transcripts too. I have not yet seen a deletion happen here.

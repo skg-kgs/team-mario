@@ -10,4 +10,7 @@ body: |2-
   and each request's usage says which. So the pacer's Top, on Fable, costs
   twice what an Opus specialist costs per token. These are list prices;
   how the subscription's limits weigh tokens is not published, so a
-  dollar figure measures the subscription only as far as they follow list prices.
+  list-price dollar measures the subscription only as far as they follow
+  list prices. They do not: Scarlett found a Fable dollar uses about
+  two and a half times what an Opus dollar does, and the account's
+  'weighted_usd' applies her weights, which sit at the top of the script.

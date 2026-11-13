@@ -1,0 +1,12 @@
+title: A team script finds the repository from its own path, so a copy of it in a scratch folder is tested without touching anything real.
+pid: c8ff81f3-3184-4a1b-b38b-264200d1eef9
+body: |2-
+  'tools/team/pacer.sh' and 'specialist.sh' set their root two folders
+  above themselves, and 'spending_account.py' puts its tables there by
+  default. So copy the script, and the scripts it calls, into
+  'SCRATCH/tools/team/'. For the pacer, put a fake 'claude' first on
+  'PATH' and point 'PACER_DIR', 'MAIL_FILE' and 'CLAUDE_CONFIG_DIR' into
+  the scratch folder; 'pacer.sh once' then runs one whole session, the
+  account step included, in a second, and making a table's path a folder
+  makes the script fail. For 'specialist.sh', write
+  'SCRATCH/data/claude/team/ports'; 'test_spending_account.py' does that.

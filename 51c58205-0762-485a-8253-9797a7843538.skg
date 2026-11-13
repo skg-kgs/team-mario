@@ -1,0 +1,7 @@
+title: A request's time is when its response began to arrive, and one response's records can span seconds.
+pid: 51c58205-0762-485a-8253-9797a7843538
+body: |2-
+  Each content block of a response is its own transcript record, with
+  its own timestamp: one response's two records were 8 seconds apart.
+  The requests file takes the first. Against the pacer's samples,
+  minutes apart, that is close enough; to time a request exactly it is not.

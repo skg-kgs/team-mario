@@ -1,0 +1,45 @@
+title: '2026-11-13: the account of what each session and subagent cost is built, and runs with ''python3 tools/team/spending_account.py''.'
+pid: 8f5f8969-c980-4259-b180-4253a5271cfc
+body: |2-
+  What was done. 'tools/team/spending_account.py' reads every transcript
+  under 'my-dot-claude/projects/' and brings
+  'data/claude/spending/account.tsv' up to date. That file is
+  tab-separated with a header, and has one row per session and one per
+  subagent (138 now). Its '--help' says what each column is and how to
+  query it with awk or sqlite3. The run takes half a second. Running it
+  again replaces the rows of transcripts that still exist and keeps the
+  rest, so no row is doubled or lost. Beyond the columns asked for, a row has 'parent' (for
+  nested subagents), 'title' and 'usd'. The test,
+  'tools/team/test_spending_account.py', runs on transcripts it makes.
+  Nothing in 'bash/all-tests.sh' ran Python, so I added a "Team tool
+  tests" phase that runs every 'tools/team/test_*.py' (33 lines). The
+  whole suite passed, all 72 integration tests included.
+  How I checked it. The pacer's log names 34 sessions, ten of them on 2026-11-13. Each
+  matches exactly one row whose origin is 'pacer': its start is within a second of the log's,
+  and so is its end, now that a session ends when its last subagent ends. No
+  pacer row is left unmatched. Token sums equal Claude Code's own
+  'cost-state' records model by model, and so do the dollars.
+  The one comparable number is 'usd': each request priced at the list
+  prices Claude Code itself applies. It is honest as an API price. Whether the
+  subscription's limits weigh tokens the same way is not published.
+  Scarlett could test that by comparing each pacer interval's rise in
+  the week's fraction (pacer log) with the sum of 'usd' in that interval.
+  What I am unsure of. The price of an hour's cache write for Sonnet and
+  Haiku is assumed, since no such write has happened yet. I have not seen the 30-day
+  transcript deletion happen. 'origin' 'jeff' means any interactive
+  terminal session.
+  What surprised me. Per token, Fable costs twice what Opus costs, and the pacer runs
+  Top on Fable, so a pacer session of Top ($1 to $3) costs about as much
+  as a specialist's mission. Three missions to Mario were written in
+  Top's own words, not in 'specialist.sh prompt's, so the account
+  cannot say they were Mario's ($6.61 together). Lend every mind through
+  that prompt and sums by specialist come out whole.
+  Suggestions. If the pacer ran the script after each session (one line in
+  'session ()' of 'tools/team/pacer.sh'), the account would stay current, and
+  Claude Code's 30-day deletion could not take a transcript before its
+  row is written. Scarlett, once born, is the natural owner of both. The
+  account holds the first lines of Jeff's own prompts, some private (medical
+  records). It is under 'data/', which git ignores; keep it out of any
+  public skgrepo.
+  Nothing is committed: the two new scripts, the change to
+  'bash/all-tests.sh', and the notes under my "what I know".

@@ -1,0 +1,9 @@
+title: Summed with care, a transcript's token counts equal Claude Code's own to the token.
+pid: b7d2e829-b9d5-40ff-bd01-fac1a0d408f5
+body: |2-
+  A response is streamed into one transcript record per content block,
+  and each repeats the whole response's usage, so a naive sum counts a
+  request two or three times. Counted once per 'requestId', the sums
+  equal the 'cost-state' record Claude Code writes, model by model,
+  exactly (checked on every pacer session of 2026-11-12 and 13 that
+  used no web tool).

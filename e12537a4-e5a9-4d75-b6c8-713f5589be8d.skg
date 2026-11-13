@@ -1,0 +1,18 @@
+title: Claude Code's transcripts record what each session and subagent spent, with gaps.
+pid: e12537a4-e5a9-4d75-b6c8-713f5589be8d
+body: |2-
+  Every session's tokens, model and times are in Claude Code's
+  transcripts, '.jsonl' files under 'my-dot-claude/projects/'.
+  'tools/team/spending_account.py' reads them into one table,
+  'data/claude/spending/account.tsv', a row per session and per subagent;
+  its help says how to run it, what each column means and how the price
+  is made. What the code cannot say cheaply is below.
+contains:
+- b7d2e829-b9d5-40ff-bd01-fac1a0d408f5
+- c0ed40b3-0f80-4ad6-a02b-b9a5b460ba16
+- 95288ff7-de91-4674-a1d8-285dc86fb99a
+- d9f4ae45-70a3-4896-a5ea-7dfa9254c79f
+- 2b15ec83-3032-4655-8455-c6943466703c
+- 154f454d-f115-44d1-aa09-7a8e18d6713c
+- 45f53beb-7ca1-42a9-94d8-104b3e25d01a
+- d70a02ef-828b-4a0d-92cf-e83ceaf284ab

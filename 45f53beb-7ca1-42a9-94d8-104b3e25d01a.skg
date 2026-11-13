@@ -1,0 +1,8 @@
+title: Transcripts are deleted after thirty days, so the account keeps rows whose transcripts are gone.
+pid: 45f53beb-7ca1-42a9-94d8-104b3e25d01a
+body: |2-
+  Claude Code removes transcripts older than its 'cleanupPeriodDays'
+  setting, 30 by default, which 'my-dot-claude/settings.json' does not
+  change. Rebuilding the account from nothing would lose them; running
+  the script again replaces only rows whose transcripts still exist.
+  I have not yet seen a deletion happen here.

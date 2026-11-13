@@ -1,0 +1,8 @@
+title: A session's transcript is silent while the session waits on a subagent.
+pid: 2b15ec83-3032-4655-8455-c6943466703c
+body: |2-
+  So its last record can come long before the session ends: session
+  6a206de9 wrote nothing after 09:03, and its background subagent ran
+  until the pacer stopped it at 09:13. The account therefore ends a
+  session at its last subagent's end, and then agrees with the pacer's
+  log to the second for every pacer session.

@@ -1,0 +1,13 @@
+title: What Libby should be told.
+pid: c504032c-c6a1-4bb7-97c1-8b5fc376749e
+body: |2-
+  Her script now lives at 'tools/team/check_jeffs_files.py', placing
+  exactly as hers did (over today their reports match line for line),
+  and hers in her folder can go. Over each pacer session she now has the
+  listings, so a deletion shows as a GONE line with its path. The log
+  starts with one run by hand over today, whose twenty "our tool calls"
+  are my own tests at '/tmp/mario-scratch/data/jeff', not his folder;
+  nothing of ours touched his files. Two of her limits remain: a write
+  of ours within two seconds of his save still reads as his, and the
+  OURS? tolerance of five seconds placed my test's unknown write as
+  ours when it came three seconds after one of our calls.

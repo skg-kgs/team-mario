@@ -10,3 +10,13 @@ body: |2-
   account step included, in a second, and making a table's path a folder
   makes the script fail. For 'specialist.sh', write
   'SCRATCH/data/claude/team/ports'; 'test_spending_account.py' does that.
+  'check_jeffs_files.py' reads 'SCRATCH/data/jeff/', so give the scratch
+  folder a small 'data/jeff/' of its own: a 'skgconfig.toml' naming one
+  skgrepo, that skgrepo as a gitrepo, and an empty
+  'skgconfig.toml.running/start-servers.X.log' to append fake saves to.
+  A fake 'claude' that is a script named 'claude' runs as a process
+  named 'claude', so 'pacer.sh hold' works from inside it too.
+  Two costs of such a test, seen 2026-11-14: its commands write to a
+  path ending in 'data/jeff', so the real check lists them among "our
+  tool calls" until the window passes; and 'pkill -f SCRATCH/...' kills
+  the shell that runs it, whose own command line matches.

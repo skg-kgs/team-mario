@@ -1,0 +1,12 @@
+title: The commands for your root note.
+pid: a37f76bf-6a2d-405c-94a6-2c303c7c5703
+body: |2-
+  On waking: 'tools/team/pacer.sh holds'. Before writing anything:
+  'tools/team/pacer.sh hold graph' (add 'code' when building, and each
+  specialist's name before lending a mind to it); if it refuses, it
+  says who holds what, and nothing was held. When done with something:
+  'tools/team/pacer.sh release WHAT', or 'release' for everything. A
+  session cut off lets go by itself. A session with Jeff that holds
+  'graph' keeps the pacer waiting, as 'pause' did, until it releases or
+  ends: so release 'graph' when you no longer need it, or the pacer
+  waits as long as that Claude stays open.

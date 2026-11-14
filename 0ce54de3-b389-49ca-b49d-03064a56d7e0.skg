@@ -6,3 +6,5 @@ body: |2-
   for days. Write the new file beside the old, give it the old one's
   mode, and 'mv' it over: the running bash keeps reading the old file,
   and the next start reads the new one.
+  Once it is renamed over, the new file may be edited in place: the
+  running bash holds the old one open, and no longer sees the path.

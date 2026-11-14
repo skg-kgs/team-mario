@@ -1,0 +1,10 @@
+title: A deletion is placed by path only through the listings, so they are taken at each session's start and end and once a day.
+pid: 1323dfe1-861e-449d-9721-af87fdc17195
+body: |2-
+  They are in 'data/claude/pacer/jeff-files/': 'STAMP.start.gz',
+  'STAMP.end.gz', 'day.STAMP.gz', and 'last-daily', which says when the
+  daily check last ran and from which listing the next one starts.
+  Each is a gzipped list of path, size and time, 1.4 MB for 62 thousand
+  files, so they are deleted after a week; the GONE lines in the log
+  keep what they showed. 'zcat' reads them; the check compares two with
+  '--before' and '--after'.

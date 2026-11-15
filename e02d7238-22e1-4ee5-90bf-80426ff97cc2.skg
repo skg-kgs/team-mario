@@ -1,0 +1,6 @@
+title: A rented burst machine for the full suite would not pay.
+pid: e02d7238-22e1-4ee5-90bf-80426ff97cc2
+body: |2-
+  The suite uses under one core, so more cores barely help it, and a
+  fresh machine would first need a three-minute cold build and a copy of
+  the tree.

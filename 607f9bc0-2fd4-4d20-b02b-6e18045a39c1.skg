@@ -1,0 +1,19 @@
+title: Outside Docker and NixOS, skg needs only the toolchain the image now supplies; one script calls Docker.
+pid: 607f9bc0-2fd4-4d20-b02b-6e18045a39c1
+body: |2-
+  Found 2026-11-15. The image is built with Nix from a file on the host,
+  which this container cannot see, so its contents are read from what is
+  installed: Rust 1.99 (the code needs edition 2024), cargo-nextest,
+  cargo-watch, gcc, cmake and pkg-config (cargo compiles libgit2, zlib
+  and zstd from C), Emacs 31 with magit, Neovim 0.12 with nvim-orgmode,
+  its tree-sitter parser, plenary, neogit and diffview, Python 3, Node
+  for Claude Code, git, ripgrep, fd, jq, and taskset and ionice, which
+  the test runners use.
+  What names Docker: 'bash/import-org-roam.sh' ('docker exec'), the
+  'windows/' packaging (a separate product for Windows users), and
+  'coding-advice/docker.org'. The image sets CLAUDE_CONFIG_DIR to
+  'my-dot-claude' in the tree so sessions survive a rebuild;
+  'spending_account.py', 'check_jeffs_files.py' and 'claude-usage.sh'
+  fall back to '~/.claude' without it. The loader shim that lets the
+  npm-installed 'claude' run is needed only on Nix.
+  'nix' in 'Cargo.lock' is a Rust crate for Unix calls, not NixOS.

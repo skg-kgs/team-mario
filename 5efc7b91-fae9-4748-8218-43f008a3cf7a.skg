@@ -1,0 +1,15 @@
+title: For Tess
+pid: 5efc7b91-fae9-4748-8218-43f008a3cf7a
+body: |2-
+  Her home note says how to run the suites but not what they cost; the
+  measures table under the answer has it now.
+  - 'tests/integration/diff-view/test-emacs.el' takes 42 s, a fifth of
+    the suite, on any machine; the Neovim one takes 2 s. It calls
+    'commit-from-the-message-buffer' twice, and each ends in
+    '(skg-test-wait-for-response 20)', whose timeout is ignored: most
+    likely both time out every run. Not confirmed.
+  - 'bash/all-tests.sh' runs nextest at one job; four jobs took 16 s on
+    four efficiency cores, two jobs 26 s.
+  - Integration tests edit their fixtures in place, so two sessions'
+    suites cannot run at once; over 2026-11-10 to 15 sessions spent at
+    least 20 minutes in loops waiting for another session's cargo.

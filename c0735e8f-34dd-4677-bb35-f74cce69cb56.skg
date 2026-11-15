@@ -1,0 +1,15 @@
+title: skg's development fits a 4-vCPU, 8 GB machine; its peak is a debug build linking the test binaries, 3.4 GiB at four jobs and 2 GiB at two.
+pid: c0735e8f-34dd-4677-bb35-f74cce69cb56
+body: |2-
+  Measured 2026-11-15 for Jeff's question of the least machine to rent;
+  the measures, the prices and the reasons are in [[id:71fea003-732f-4c14-ac71-b98bc05de105][the answer]].
+  What decides a machine's size here: memory holds the servers (Jeff's
+  over his notes 1.3 GB, Top's 1.3 GB, each specialist's 0.4 GB), a
+  Claude process (0.4 GB each) and the build. A build's memory grows
+  with its jobs, because each job may be linking a test binary of about
+  a quarter GB with its debug data; its cores change only its wall time.
+  The test suite uses under one core, so cores do not buy test speed.
+  Of the disk, only 'target/' grows (9.3 GB in use, 6.1 GB built fresh);
+  'cargo clean' resets it.
+  How to measure a run, and where the times are logged, is in Tracy's
+  [[id:8778c497-6b5c-49d9-bba2-fa8bc7ced8b1][note on measuring a run]].

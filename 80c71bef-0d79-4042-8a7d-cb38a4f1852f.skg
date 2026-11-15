@@ -1,0 +1,21 @@
+title: The least machine is 4 vCPU, 8 GB and 80 GB of disk; below 8 GB, a build beside the servers is what gives first.
+pid: 80c71bef-0d79-4042-8a7d-cb38a4f1852f
+body: |2-
+  At a moment of building, memory holds: your server over your notes
+  1.3 GB, the team's coordinator's server 1.3 GB, one or two
+  specialists' servers 0.4 GB each, a Claude process or two 0.4 GB
+  each, the build 3.4 GiB (2 GiB if limited to two jobs), and the
+  system with an editor about 1 GB. That is 7 to 8.5 GB. So 8 GB works
+  with builds kept to two jobs; 16 GB works without care. Below 8 GB the
+  build pushes into swap, and a 35-second rebuild becomes minutes.
+  Cores give way more gently: on two cores a rebuild after an edit took
+  45 s instead of 35, and a cold build would take about twice as long.
+  Disk: about 22 GB is in use, of which the build folder is 9 GB and
+  grows until cleaned; 40 GB is the floor, 80 GB comfortable.
+  If your own server and notes stay on this laptop and only the team's
+  work moves, take 1.3 GB off.
+  To decide: whether to rent, which machine, and whether your own server
+  moves too. If you do not answer, nothing is rented, and the work stays
+  on this laptop.
+contains:
+- c033e997-813b-4c92-8d6d-11702b4ef756

@@ -1,0 +1,6 @@
+title: Let two suites run at once, by copying the integration fixtures instead of editing them in place.
+pid: c0258584-7cf4-4311-b086-fdb2ababccf4
+body: |2-
+  That would end the waiting between sessions, at least 20 minutes in five
+  days and more as more missions build. The cost is a change to the
+  integration harness, a few hours' work.

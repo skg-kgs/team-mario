@@ -1,0 +1,7 @@
+title: 'Run the Rust tests four at a time instead of one: about 30 s off each full run, for a one-line change.'
+pid: 298e4215-c5b7-4b91-a6db-591e73f3e341
+body: |2-
+  On four small cores they took 16 s at four jobs and 26 s at two. The
+  full suite runs them at one, a setting chosen to keep this laptop
+  usable while you work on it, and its Rust phase took 82 s, compiling
+  included. On a rented machine nobody is typing.

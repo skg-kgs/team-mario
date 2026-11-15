@@ -1,0 +1,17 @@
+title: A rented 4-vCPU, 8 GB Linux machine is enough to develop skg, at about €30 a month; missions wait on the model, not on the tests.
+pid: 71fea003-732f-4c14-ac71-b98bc05de105
+body: |2-
+  Measured 2026-11-15 on this laptop, with four of its slower cores
+  standing in for a rented machine's four vCPUs. Nothing here was run
+  on a rented machine, so the speeds there are an estimate, likely
+  somewhat slower.
+  The biggest load is a debug build linking the test binaries (3.4 GiB
+  at four jobs), beside the servers and Claude's own processes (about
+  4 GB together). The whole test suite uses less than one core: it is
+  mostly waiting. And in the last five days the model's own time was
+  three quarters of all working time, the tests about a tenth.
+contains:
+- 80c71bef-0d79-4042-8a7d-cb38a4f1852f
+- 674ab89f-31ef-49ee-960a-f3e145dd5a5f
+- 8eaadf31-7921-49f5-9c46-2b05b6138cd0
+- 49d94d7f-423f-4835-a238-2c9e891d697b

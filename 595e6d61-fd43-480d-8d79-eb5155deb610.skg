@@ -1,0 +1,10 @@
+title: Your waiter is right; the root note's lines on the pacer should say not to restart it by 'kill'.
+pid: 595e6d61-fd43-480d-8d79-eb5155deb610
+body: |2-
+  The waiter ('stop', then wait on the pid, then 'exec ... run') is the
+  safe way and needs no change. What is untrue or missing in your notes:
+  the note on restarting the pacer (5a92324a) says it is done "from
+  inside a session it started"; from any other session it is the same
+  'stop' and waiter, and 'kill' must not be used, since it orphans the
+  session. 'pacer.sh status' no longer prints "running (pid N)" but
+  "running: the pacer (pid N, started T)", if anything of yours greps it.

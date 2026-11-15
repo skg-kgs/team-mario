@@ -1,0 +1,11 @@
+title: A pacer's sleep does not count the time the machine is away, so its log falls silent through a suspend.
+pid: 1f18c53a-412a-4fd9-a0e8-77a42ef77abd
+body: |2-
+  On 2026-11-15 the log has nothing from 05:13:33 to 08:03:11, though the
+  pacer polls every ten minutes. 'sleep' counts on a clock that stops
+  while the machine is suspended, so the ten minutes begun at 05:13:33
+  ran out only at 08:03:11: the machine was away for all but ten
+  minutes of that time. No
+  'curl' of the usage check was running at 08:02:50, so it was not a
+  request hanging. Before the silence, 'usage could not be read' every
+  ten minutes meant no network.

@@ -1,0 +1,14 @@
+title: On 2026-11-15 two sessions ran because a session Jeff opened restarted the pacer by hand, five seconds after it had begun a session.
+pid: cb755089-f7b4-460b-9df7-4f4c94c0ae68
+body: |2-
+  Found from the second pacer's '/proc/PID/environ' and from the
+  transcript of the session named there. Jeff had told Top's interactive
+  session (4fc4ae11) "Didn't have internet for a while ... Please
+  resume." At 08:02:44 it saw the pacer alive and waiting; at 08:03:11
+  the pacer began a session; at about 08:03:16 Top ran 'kill' on the
+  pacer, deleted the pid file, and started a new one with 'setsid nohup
+  tools/team/pacer.sh run > data/claude/pacer/run.out'. The new pacer
+  began its own session at 08:03:22. Top then saw two sessions and
+  killed the orphaned first (and its 'timeout' and 'claude') at 08:03:39,
+  which is the hold the log calls lapsed at 08:03:45. The waiter in Top's
+  root note did not run: 'restart.out' was last written 2026-11-14.

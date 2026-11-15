@@ -1,9 +1,0 @@
-title: Where working time went, 2026-11-10 to 15.
-pid: 7c6b072c-c7d0-425a-9881-989509755213
-body: |2-
-  Minutes are summed over all sessions, so they exceed the elapsed time
-  when sessions ran together, and are not the length of your waiting.
-  | Sessions                      | Minutes | Claude thinking | Tests, with waits for them | Builds  | Reading and saving notes | Other commands (including one 40-minute test of a script that waits on purpose) |
-  |-------------------------------+---------+-----------------+----------------------------+---------+--------------------------+---------------------------------------------------------------------------------|
-  | All                           |   1,315 | 1,017 (77%)     | 108 (8%)                   | 22 (2%) | 76 (6%)                  | 87 (7%)                                                                         |
-  | Build missions (specialists)  |     171 | 111 (65%)       | 39 (23%)                   | 5 (3%)  | 8 (5%)                   | 8 (5%)                                                                          |

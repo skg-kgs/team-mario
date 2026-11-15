@@ -1,8 +1,0 @@
-title: A 'cost-state' record is the cost of one run of the process, so it is not a session's total.
-pid: d9f4ae45-70a3-4896-a5ea-7dfa9254c79f
-body: |2-
-  It starts again from nothing when a session is resumed: Jeff's
-  session 'Top' (4fc4ae11, two days, resumed) has a last 'cost-state'
-  of a fraction of what its records sum to. A process killed before it
-  writes one leaves none (4c5f34ac, cut off by a container stop). Use
-  it to check prices, not to total.

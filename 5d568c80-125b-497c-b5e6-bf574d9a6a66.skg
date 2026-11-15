@@ -1,7 +1,0 @@
-title: The daily check covers the time since the last daily check, not the calendar day.
-pid: 5d568c80-125b-497c-b5e6-bf574d9a6a66
-body: |2-
-  The pacer checks once per UTC date, at the first loop after midnight
-  that is not inside a session, so one window ends where the next
-  begins and nothing falls between. Its first run only records where
-  the first window starts.

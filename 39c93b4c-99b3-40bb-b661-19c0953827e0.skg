@@ -1,7 +1,0 @@
-title: The log takes at most 300 lines to read per window.
-pid: 39c93b4c-99b3-40bb-b661-19c0953827e0
-body: |2-
-  A pull of his writes hundreds of files at once, and a mistake that
-  deleted a skgrepo would write sixty thousand GONE lines. Past 300 the
-  log says how many more there are; the check run by hand over the same
-  window, with the same listings, prints them all.

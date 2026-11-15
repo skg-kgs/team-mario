@@ -1,9 +1,0 @@
-title: A process's environment names the Claude session that started it.
-pid: afe38bf4-0ad2-41b6-b101-93d49072d4b7
-body: |2-
-  '/proc/PID/environ' of anything a Claude session ran holds
-  'CLAUDE_CODE_SESSION_ID' and 'CLAUDE_PID', and 'PACER_SESSION' if the
-  pacer started that session; the session's transcript is then
-  'my-dot-claude/projects/-home-ubuntu-host/ID.jsonl'. A process's open
-  files ('/proc/PID/fd') show where its output goes. Read them while the
-  process lives: they go with it.

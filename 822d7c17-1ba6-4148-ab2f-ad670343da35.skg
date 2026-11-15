@@ -1,7 +1,0 @@
-title: Running only the tests a change can touch would save little.
-pid: 822d7c17-1ba6-4148-ab2f-ad670343da35
-body: |2-
-  The Rust tests themselves run in 16 to 47 s; what costs is compiling
-  them, 35 s after an edit, and choosing tests does not avoid that. A
-  change only to an editor client's code can already run that client's
-  tests alone.

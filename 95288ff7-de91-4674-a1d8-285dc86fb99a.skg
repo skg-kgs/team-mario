@@ -1,8 +1,0 @@
-title: Some spending is in no transcript.
-pid: 95288ff7-de91-4674-a1d8-285dc86fb99a
-body: |2-
-  Claude Code's side requests are counted in 'cost-state' but leave no
-  record: the model behind WebSearch and WebFetch (8 searches and 300k
-  Haiku tokens, 12 cents, in one session of 2026-11-13) and the
-  generated titles. So a row of the account undercounts a session that
-  used web tools, by cents.

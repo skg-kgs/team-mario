@@ -1,8 +1,0 @@
-title: 'Run the Rust tests four at a time instead of one: 31 s off each full run, for a one-line change.'
-pid: 298e4215-c5b7-4b91-a6db-591e73f3e341
-body: |2-
-  On four efficiency cores they took 47 s with one test running at a
-  time, 26 s with two and 16 s with four. The full suite,
-  'bash/all-tests.sh', runs them one at a time, a setting chosen to keep
-  this laptop usable while you work on it. On a rented machine nobody
-  is typing.

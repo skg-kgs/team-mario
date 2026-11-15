@@ -1,19 +1,19 @@
-title: 'Missions wait mostly on the model: the tests take about a tenth of all working time, and a quarter of a build mission''s.'
+title: 'Missions wait mostly on Claude: the tests take 8% of all working time, and 23% of a build mission''s.'
 pid: 8eaadf31-7921-49f5-9c46-2b05b6138cd0
 body: |2-
-  Measured from every session's record since 2026-11-10, timing each
-  tool call from its start to its result. Time a session spent waiting
-  on a mind it lent out is counted once, in that mind's own record.
+  Measured from every Claude session's log since 2026-11-10, timing each
+  command or step from its start to its result.
   The suite is slow by setting more than by hardware: it runs the Rust
   tests one at a time, runs the integration tests one at a time, and
-  one integration test waits 40 s for nothing. On four small cores it
-  used under one core on average. So a bigger machine would not speed
-  it much, and a smaller one would not slow it much.
+  one integration test waits about 40 s, probably for nothing. On four
+  efficiency cores it used under one core on average. So a bigger
+  machine would not speed it much, and a smaller one would not slow it
+  much.
   At least 20 minutes in those five days were sessions waiting for
   another session's build or tests to finish, because two suites
   cannot run at once: the integration tests edit their fixtures in place.
-  What would shorten missions most is fewer or shorter model turns, which
-  no machine buys.
+  What would shorten missions most is fewer or shorter back-and-forths
+  with Claude, which no machine buys.
   If you do not answer, the suite stays as it is.
 contains:
 - 7c6b072c-c7d0-425a-9881-989509755213
@@ -21,4 +21,3 @@ contains:
 - 8708a388-cce4-4893-a72d-a5dbe7609fa6
 - c0258584-7cf4-4311-b086-fdb2ababccf4
 - 822d7c17-1ba6-4148-ab2f-ad670343da35
-- e02d7238-22e1-4ee5-90bf-80426ff97cc2

@@ -3,22 +3,20 @@ pid: c033e997-813b-4c92-8d6d-11702b4ef756
 body: |2-
   "Four small cores" is four of this laptop's 3.5 GHz efficiency
   cores, standing in for four rented vCPUs. Memory is the peak of the
-  whole process tree.
-  | What                                                     | Run on              | Wall            | Cores (mean) | Peak memory              | Disk                        |
-  |----------------------------------------------------------+---------------------+-----------------+--------------+--------------------------+-----------------------------|
-  | Your server over your notes (57,502 notes), 19 h running | all cores           | ready in 3.8 s  | 580 CPU-s    | 1.27 GB                  | notes 418 MB, index 19 MB   |
-  | a save on your server (125 of them)                      | all cores           | 97 ms (p90 130) |              |                          |                             |
-  | The coordinator's server over the team's notes           | all cores           |                 |              | 1.28 GB                  | 362 MB                      |
-  | One specialist's server                                  | all cores           |                 |              | 0.39 GB                  |                             |
-  | One Claude Code process                                  |                     |                 |              | 0.37 GB                  | transcripts 0.3 GB          |
-  | Cold debug build: server and test binaries               | four small cores    | 190 s           | 3.2          | 3.83 GiB                 | 6.1 GB                      |
-  | Rebuild after editing one file: server and tests         | four small cores    | 35 s            | 2.4          | 3.42 GiB                 |                             |
-  | the same, two jobs                                       | two small cores     | 45 s            | 1.7          | 2.04 GiB                 |                             |
-  | Rust tests (1,226), four jobs                            | four small cores    | 16 s            | 2.9          | 0.21 GiB                 |                             |
-  | the same, two jobs                                       | two small cores     | 27 s            | 1.5          | 0.15 GiB                 |                             |
-  | Whole suite, 'bash/all-tests.sh', as it is today         | four small cores    | 214 s           | 0.8          | 1.90 GiB                 |                             |
-  | the same                                                 | all 16 threads      | 168 s           |              |                          |                             |
-  | its 76 integration runs (both clients)                   | four small cores    | 113 s           | 0.2          | 0.21 GiB                 |                             |
-  | Cold release build                                       | four small cores    | 233 s           | 3.8          | 2.15 GiB                 | 0.6 GB                      |
-  | Release rebuild after editing one file                   | four small cores    | 68 s            | 2.9          | 1.19 GiB                 |                             |
-  | Everything on disk                                       |                     |                 |              |                          | 22 GB, of which build 9 GB  |
+  whole tree of programs.
+  | What                                                     | Run on            | Time            | Cores busy on average | Peak memory | Disk                       |
+  |----------------------------------------------------------+-------------------+-----------------+-----------------------+-------------+----------------------------|
+  | Your server over your notes (57,502 notes), 19 h running | all cores         | ready in 3.8 s  | 580 CPU-s in all      | 1.3 GB      | notes 418 MB, index 19 MB  |
+  | Top's server over the team's notes                       | all cores         |                 |                       | 1.3 GB      | 362 MB                     |
+  | One specialist's server                                  | all cores         |                 |                       | 0.4 GB      |                            |
+  | One Claude program                                       |                   |                 |                       | 0.4 GB      | its logs 0.3 GB            |
+  | Build from nothing: server and test programs             | four small cores  | 190 s           | 3.2                   | 4.1 GB      | 6.1 GB                     |
+  | Rebuild after editing one file: server and tests         | four small cores  | 35 s            | 2.4                   | 3.7 GB      |                            |
+  | the same, two at once                                    | two small cores   | 45 s            | 1.7                   | 2.2 GB      |                            |
+  | Rust tests (1,226), one at a time                        | four small cores  | 47 s            | 0.9                   | 0.2 GB      |                            |
+  | the same, four at a time                                 | four small cores  | 16 s            | 2.9                   | 0.2 GB      |                            |
+  | the same, two at a time                                  | two small cores   | 27 s            | 1.5                   | 0.2 GB      |                            |
+  | Whole suite, 'bash/all-tests.sh', as it is today         | four small cores  | 214 s           | 0.8                   | 2.0 GB      |                            |
+  | the same                                                 | all 16 threads    | 168 s           |                       |             |                            |
+  | its 76 integration runs (both editors)                   | four small cores  | 113 s           | 0.2                   | 0.2 GB      |                            |
+  | Everything on disk                                       |                   |                 |                       |             | 22 GB, of which build 9 GB |

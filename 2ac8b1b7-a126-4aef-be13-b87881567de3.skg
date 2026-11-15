@@ -1,0 +1,32 @@
+title: '2026-11-15: Libby''s reading of the machine answer is applied, and the answer is mailed to Jeff from Mario''s graph only.'
+pid: 2ac8b1b7-a126-4aef-be13-b87881567de3
+body: |2-
+  Mario's fork of Jeff's 'to Jeff': d80a2ffe-3c77-499e-af77-fafc70e6c7e8.
+  Mario's 'to Jeff' under it: 36b45aa5-e9e6-40d8-bd4e-ed788a86e3d5,
+  holding the answer, 71fea003-732f-4c14-ac71-b98bc05de105. The save
+  forked only Jeff's 'to Jeff', into 'mario'; nothing foreign was written.
+  Tracy has no 'to Jeff' and her server was down, so it went from
+  Mario's only.
+  The root's final title: "If you want the work off this laptop, rent a
+  Hetzner CPX32 (4 vCPU, 8 GB, about $34 a month) for a month's trial;
+  no machine will make missions faster, since they wait on Claude's
+  thinking, not on the tests."
+  Libby's findings: all applied; none declined. Four were met another
+  way than she wrote:
+  - Her "To decide" line for the root became three notes, the root's
+    first children (rent or stay; which machine, Hetzner CPX32 named;
+    whether his own server moves, default it stays), as you asked.
+  - "About 30 s" saved by four test jobs: measured instead, 47 s at one
+    job on four efficiency cores, so the title says 31 s.
+  - Her "8 to 8.5 GB": with every figure now in GB (she asked for one
+    unit), the parts sum to about 8 to 9 GB; the note says that.
+  - The list of packages stays in the Docker note, marked "for the
+    install script, not for you", rather than moved behind a link.
+  The times she asked for ("Claude can do it in N hours") are my
+  estimates, and the notes say so: under an hour for the 42-second
+  test, a few hours for copying fixtures, half a day for an install
+  script. The euro rate is the ECB's of 13 November, 1.1052; a currency
+  site gave 1.102 and a search snippet 1.156. That a US customer pays
+  no European VAT is stated as unconfirmed.
+  Jeff's 'to Jeff' file shows as modified in his Git, but by his own
+  edit of 2026-11-14 14:55, not by this save.

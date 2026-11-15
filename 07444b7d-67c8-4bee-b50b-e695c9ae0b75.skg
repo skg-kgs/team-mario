@@ -1,0 +1,5 @@
+title: 'Rent a machine, or keep the work on this laptop? I recommend renting only if you want this laptop free: it would not make missions faster.'
+pid: 07444b7d-67c8-4bee-b50b-e695c9ae0b75
+body: |2-
+  Type "rent" or "stay" under this.
+  If you do not answer, nothing is rented, and the work stays on this laptop.

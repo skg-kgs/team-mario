@@ -1,7 +1,9 @@
-title: 'Find why the Emacs diff-view integration test takes 42 s: probably two 20-second waits that time out every run.'
+title: The Emacs diff-view integration test takes 42 s, probably from two 20-second waits that time out every run.
 pid: 8708a388-cce4-4893-a72d-a5dbe7609fa6
 body: |2-
-  It calls its commit helper twice, and each call ends by waiting up to
-  20 s for the client to go idle, ignoring a timeout. The same test on
-  the Neovim client takes 2 s, and it took 42 s on both machines, so it
-  is waiting, not working. That is a fifth of the suite.
+  It commits twice, and each step that commits ends by waiting up to
+  20 s for the editor to be still, ignoring a timeout. The same test on
+  the Neovim client takes 2 s, and it took 42 s both on all cores and
+  on four efficiency cores, so it is waiting, not working. That is a
+  fifth of the suite. Claude can likely find and fix it in under an
+  hour (an estimate).

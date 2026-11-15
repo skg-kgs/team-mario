@@ -1,19 +1,21 @@
-title: Moving off NixOS and Docker means installing the tools by hand; one script calls Docker, and nothing else depends on it.
+title: Moving off NixOS and Docker means installing the tools by hand; one script calls Docker, two other things only mention it, and nothing in the server, clients or tests needs it.
 pid: 49d94d7f-423f-4835-a238-2c9e891d697b
 body: |2-
   The container's image, built with Nix outside this repository,
-  supplies everything: Rust 1.99 (the code needs edition 2024),
-  cargo-nextest and cargo-watch, gcc, cmake and pkg-config for the C
-  libraries cargo compiles (libgit2, zlib, zstd), Emacs 31 with magit,
-  Neovim 0.12 with nvim-orgmode, its tree-sitter parser, plenary, neogit
-  and diffview, Python 3, Node for Claude Code, and git, ripgrep, fd and
-  jq. On a plain Linux these come from the package manager, rustup and
-  Neovim's plugin manager; the Neovim parser is the fiddly one.
+  supplies everything (the list is for the install script, not for
+  you): Rust 1.99 (the code needs edition 2024), cargo-nextest and
+  cargo-watch, gcc, cmake and pkg-config for the C libraries cargo
+  compiles (libgit2, zlib, zstd), Emacs 31 with magit, Neovim 0.12 with
+  nvim-orgmode, its tree-sitter parser, plenary, neogit and diffview,
+  Python 3, Node for Claude Code, and git, ripgrep, fd and jq. On a
+  plain Linux these come from the package manager, rustup and Neovim's
+  plugin manager; the Neovim parser is the part most likely to take an
+  afternoon. Claude can write the install script and test it on a fresh
+  machine in about half a day (an estimate).
   What names Docker: 'bash/import-org-roam.sh' runs its import with
   'docker exec'; the 'windows/' folder packages skg for Windows users
   in Docker, a separate product; and 'coding-advice/docker.org' tells
-  Claude it is in a container. The image also points Claude's config
+  Claude it is in a container. The image also points Claude's settings
   at a folder in the repository, so sessions survive a rebuild; without
   it the team's tools fall back to '~/.claude' and still work.
-  Nothing in the server, the clients or the tests assumes either.
   If you do not answer, nothing moves.

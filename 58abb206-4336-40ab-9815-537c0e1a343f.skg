@@ -1,6 +1,0 @@
-title: 'What I am unsure of: ''once'' does not refuse while a pacer''s session runs.'
-pid: 58abb206-4336-40ab-9815-537c0e1a343f
-body: |2-
-  'pacer.sh once' starts a session whatever runs, as before, and while it
-  runs a pacer refuses to start. I left 'once' alone, as the mission did
-  not ask; say if it should refuse too.

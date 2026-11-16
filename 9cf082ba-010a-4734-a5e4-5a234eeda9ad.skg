@@ -1,0 +1,11 @@
+title: A clone of a config repo works only with 'main' checked out and an author set in each submodule, and with every foreign skgrepo its configs name present beside it.
+pid: 9cf082ba-010a-4734-a5e4-5a234eeda9ad
+body: |2-
+  Tested on a clone made with '--recurse-submodules' from local bare
+  copies. A cloned submodule sits at its pin with no branch, and has
+  none of the original's local Git config, so skg's commit fails with
+  "no git author is configured". The server refuses a config whose
+  foreign skgrepo path is missing ("Invalid skg config ... path does not
+  exist"), so claude-config needs Jeff's 'data/jeff/' beside it, and
+  his needs ours. A local test clone also needs
+  'git -c protocol.file.allow=always', which GitHub URLs do not.

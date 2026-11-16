@@ -1,0 +1,17 @@
+title: Each config folder is a Git repo whose submodules are its skgrepos in place, pinned only by the push script, and the team's running state lives in the code repo at tools/team-processing/.
+pid: 0ec29b03-11a8-49e2-aed4-23d27dd6777d
+body: |2-
+  Built 2026-11-16 for Top's mission "Make the configs a Git repo with a
+  submodule per skgrepo, and move the pacer's files, the spending account
+  and the ports into the codebase" (8b1f1241), at Jeff's asking. The
+  scripts are 'tools/team/make-config-repo.sh' and
+  'tools/team/push-graphs-to-github.sh'; their headers say how to use and
+  clone them. What follows is what they cannot say about themselves.
+contains:
+- 4ecf43c1-1d75-4c29-94ea-93652573f241
+- 9cf082ba-010a-4734-a5e4-5a234eeda9ad
+- 2267effa-ba10-4e18-a1e2-f17bf47c561e
+- aa868ee8-428c-4dcd-866b-b76315a7b609
+- 3eac63ea-0490-4a75-b88b-69d1165ae49a
+- 84a26da0-771a-4b0d-aaad-9e245f7a54e2
+- 6ff68950-5fca-4a46-91ff-61de0afc6366

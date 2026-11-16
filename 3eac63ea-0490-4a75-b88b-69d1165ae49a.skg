@@ -1,0 +1,5 @@
+title: The pacer's folder was 104 MB because of the listings of Jeff's files, which the pacer itself deletes after a week; the sessions' output was 344 KB.
+pid: 3eac63ea-0490-4a75-b88b-69d1165ae49a
+body: |2-
+  So it was moved as it was, untracked, and needs no pruning: the
+  listings prune themselves, and the 91 'session.*.out' files are small.

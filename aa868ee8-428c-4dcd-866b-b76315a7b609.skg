@@ -1,0 +1,10 @@
+title: Only the push script records the pins, and it also registers a newly born specialist's skgrepo, so nothing else need touch the outer repo's Git.
+pid: aa868ee8-428c-4dcd-866b-b76315a7b609
+body: |2-
+  Every commit to a graph moves past its pin, so recording pins anywhere
+  else would be a chore that never ends. The push script names each
+  GitHub repo, so it is the one place that knows each submodule's URL.
+  It stages named paths and 'git add -u', never 'git add -A', so a stray
+  file in 'data/claude/' is never committed. 'git add' of a new gitlink
+  warns of an "embedded repository" unless given
+  '--no-warn-embedded-repo', as 'git submodule add' does.

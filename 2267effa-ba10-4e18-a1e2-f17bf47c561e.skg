@@ -1,0 +1,9 @@
+title: The server finds each skgrepo's own gitrepo inside the outer one, whether its '.git' is a folder or, in a clone, a file.
+pid: 2267effa-ba10-4e18-a1e2-f17bf47c561e
+body: |2-
+  It opens a skgrepo with git2's 'Repository::discover' from the
+  skgrepo's folder, which stops at the first '.git'. Seen working, save
+  and commit, on a copy of 'data/claude/' as it now is and on a fresh
+  clone: each commit landed in the skgrepo, and the outer repo only saw
+  its pin move. 'specialist.sh up' tested '-d notes/.git', which a clone
+  fails; it now tests '-e'.

@@ -1,0 +1,12 @@
+title: 'A skgrepo becomes a submodule without anything being run inside it: its gitlink is written straight into the outer repo''s index.'
+pid: 4ecf43c1-1d75-4c29-94ea-93652573f241
+body: |2-
+  'git update-index --add --cacheinfo 160000,HEAD,PATH' and two lines of
+  'git config -f .gitmodules' do what 'git submodule add' does, and touch
+  only the outer repo. Run with GIT_OPTIONAL_LOCKS=0, since a plain
+  'git status' of the outer repo also refreshes each submodule's index
+  file. With both, HEAD, status, '.git/index' and '.git/config' of each
+  of Jeff's six skgrepos were byte-identical before and after.
+  Never run 'git submodule sync' on these repos: it writes each
+  skgrepo's own 'origin', and the push script takes a skgrepo that has
+  an origin to be already on GitHub.

@@ -1,0 +1,11 @@
+title: Data a running tool reads is moved with the code changed beforehand on a branch in a scratch worktree, so the gap between stop and restart is one script.
+pid: 84a26da0-771a-4b0d-aaad-9e245f7a54e2
+body: |2-
+  Changing 'specialist.sh' first would have made a specialist born
+  meanwhile write an empty ports file at the new path and get port 1770.
+  So the edits went to 'git worktree add SCRATCH -b BRANCH', were tested
+  and committed there, and one script did 'pacer.sh stop', waited for the
+  pid, moved the three paths and ran 'git merge --ff-only BRANCH'. The
+  pacer was down 11 seconds. A fast-forward replaces each file with a new
+  one, which a running bash would not notice, as the rule for replacing
+  a running script asks.

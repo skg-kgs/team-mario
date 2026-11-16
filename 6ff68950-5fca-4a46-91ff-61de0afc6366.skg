@@ -1,0 +1,9 @@
+title: Two compact views with unsaved edits that show the same node refuse each other's saves, so edit and save one view at a time and close it after.
+pid: 6ff68950-5fca-4a46-91ff-61de0afc6366
+body: |2-
+  'save' without '--yes' leaves the view edited, and the daemon names
+  every edited view in each later save. Run over 25 notes at once, 14
+  saves were refused ("conflicts with unsaved dependencies in
+  content-view:ID"), since one note's view drew another as its child.
+  'close SIDECAR' on each, then view, edit, save and close one at a time,
+  saved all 14.

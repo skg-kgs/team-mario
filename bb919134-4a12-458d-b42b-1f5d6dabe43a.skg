@@ -1,0 +1,14 @@
+title: What I tested and saw pass.
+pid: bb919134-4a12-458d-b42b-1f5d6dabe43a
+body: |2-
+  make-config-repo.sh on fixtures and on both folders; before and after
+  each, HEAD, status, '.git/index' and '.git/config' of every skgrepo
+  identical (Jeff's six and our 21). Scratch servers on a copy of
+  'data/claude/' in place and on a '--recurse-submodules' clone from
+  bare copies: start, view, save, commit, Top's config and Mario's. The
+  push script against bare repos with a fake 'gh': first run, re-run,
+  a new specialist, a rename after the push, a folder without '.git'
+  refused, and clones after each. test_pacer.py and
+  test_spending_account.py pass. After the move, 'pacer.sh holds' and
+  'status', 'specialist.sh list' and 'prompt' read the new place. The
+  pacer was down 11 s (03:54:25 to 03:54:36), and PAUSE is still there.

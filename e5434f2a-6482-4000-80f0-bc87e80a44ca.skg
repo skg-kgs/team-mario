@@ -1,0 +1,6 @@
+title: For Jeff, on the host, in this order.
+pid: e5434f2a-6482-4000-80f0-bc87e80a44ca
+body: |2-
+    tools/team/pacer.sh pause; gh auth login
+    tools/team/push-graphs-to-github.sh     # the graphs, then data/claude as skg-kgs/claude-config, private
+    tools/team/make-config-repo.sh data/jeff  # already done here; on another machine, run it, read it, then add --yes

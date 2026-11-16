@@ -8,3 +8,9 @@ body: |2-
   file in 'data/claude/' is never committed. 'git add' of a new gitlink
   warns of an "embedded repository" unless given
   '--no-warn-embedded-repo', as 'git submodule add' does.
+  The pins are taken before the graphs are pushed, not after: a commit
+  made between push and pin would pin what GitHub never got, and a
+  clone would fail with "not our ref". A submodule's URL is named after
+  its skgrepo's 'origin' when it has one, since a renamed specialist
+  keeps pushing to its old GitHub repo. Both were found by the review
+  and rehearsed against bare repos with a fake 'gh'.

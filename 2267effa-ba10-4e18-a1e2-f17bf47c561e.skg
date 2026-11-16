@@ -7,3 +7,9 @@ body: |2-
   clone: each commit landed in the skgrepo, and the outer repo only saw
   its pin move. 'specialist.sh up' tested '-d notes/.git', which a clone
   fails; it now tests '-e'.
+  The other side of it: a folder inside 'data/claude/' or 'data/jeff/'
+  with no '.git' of its own now belongs to the outer repo, for the
+  server's 'discover' and for every 'git -C'. So an owned skgrepo must
+  be 'git init'ed before its server starts, as 'specialist.sh up' does,
+  and the push script stops on a folder that is not its own gitrepo:
+  otherwise 'gh repo create --source' would push claude-config, public.

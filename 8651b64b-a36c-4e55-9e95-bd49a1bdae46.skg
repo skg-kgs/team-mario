@@ -1,0 +1,2 @@
+title: '''specialist.sh rename'' inside a clone of ''data/claude/'' would break the submodule''s ''.git/modules'' link to its worktree. Not on this machine, where each ''.git'' is a folder; I left it.'
+pid: 8651b64b-a36c-4e55-9e95-bd49a1bdae46

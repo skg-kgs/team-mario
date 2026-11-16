@@ -1,0 +1,11 @@
+title: Commits.
+pid: 62dc2964-0fab-4d3e-b098-7a80c4e47f8f
+body: |2-
+  Code, on main: 49459ca7 make-config-repo.sh; ce1b4b24 specialist.sh
+  ('-e .git', rename drops the old '.gitmodules' entry); 19a314cc push
+  script; c75db006 paths moved; 17039649 ports and anchor tracked;
+  edc07b1e, f6f7e1e5, ab735f6f fixes from the review.
+  'data/claude/': f607335, c0fc89b, b2a6cf1. 'data/jeff/': 03fe192, by
+  Claude, only '.gitignore', '.gitmodules', 'skgconfig.toml' and the six
+  pins. Nothing pushed. Your graph: the 25 path edits in claude-public,
+  which another session has since committed.

@@ -1,0 +1,2 @@
+title: The push script stages named paths and 'git add -u', never 'git add -A', so a stray file in 'data/claude/' is not committed.
+pid: e885b3b8-69dc-4ce0-b3a0-81308ea005fe

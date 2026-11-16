@@ -1,0 +1,2 @@
+title: '''pacer/anchor'' and ''ports'' are tracked files the tools rewrite, so a ''git stash'', ''checkout'' or ''reset'' in the code repo while the pacer runs can put an old anchor back, and the pace line moves mid-week.'
+pid: 2498db3f-b1c6-47fd-b35c-cae41e3135b7
